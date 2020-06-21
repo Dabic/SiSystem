@@ -1,0 +1,47 @@
+.container {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.subjects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #cfd0d1;
+    padding: 10px;
+    border-radius: 10px;
+    height: 100%;
+    box-sizing: border-box;
+    width: 250px;
+}
+.subjects .mat-form-field {
+    width: 200px;
+}
+.subjects .heading {
+    color: #2879aa;
+    font-weight: bold;
+    font-size: 17px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+.graph {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #cfd0d1;
+    border-radius: 10px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.graph-content {
+    width: 95%;
+    height: 100%;
+}

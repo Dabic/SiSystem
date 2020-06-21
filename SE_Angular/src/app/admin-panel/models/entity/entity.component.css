@@ -1,0 +1,67 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.highlight {
+  animation: light 500ms ease-out;
+}
+
+@keyframes light {
+  from {
+    background-color: #cfd0d1;
+  }
+}
+
+.notCollapsedIcon {
+  display: block;
+}
+
+.collapsedIcon {
+  display: none;
+}
+
+.collapsed .collapsedIcon {
+  display: block;
+}
+
+.collapsed .notCollapsedIcon {
+  display: none;
+}
+
+.collapsed .attributeList {
+  display: none;
+}
+
+.entityDetails {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.caret {
+  font-size: 25px;
+  color: #edb627;
+  margin-right: 4px;
+}
+
+.entity-name {
+  font-size: 20px;
+  color: #2895c7;
+  font-weight: bolder;
+  margin-left: 4px;
+}
+
+.entityDetails:hover {
+  cursor: pointer;
+}
+
+.entityDetails:hover .entity-name {
+  color: #5eccff;
+}
+
+.attributeList {
+  display: flex;
+  flex-direction: column;
+}
+

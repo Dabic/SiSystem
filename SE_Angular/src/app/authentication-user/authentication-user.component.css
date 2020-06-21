@@ -1,0 +1,27 @@
+#particles-js {
+  background-color: #20577A;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
+.container {
+  background-color: transparent;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+.login-container {
+  width: 600px;
+  padding: 25px;
+  height: 80vh;
+  background-color: #fafafa;
+  box-shadow: 3px 3px 5px 2px #1f3052;
+  z-index: 2;
+  user-select: none;
+}

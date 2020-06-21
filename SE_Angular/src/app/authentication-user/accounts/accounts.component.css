@@ -1,0 +1,22 @@
+.label {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0 40px 0;
+}
+
+.label span {
+  color: #2895c7;
+  font-weight: bolder;
+  font-size: 25px;
+}
+
+.tip {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0 40px 0;
+}
+
+.tip span {
+  color: #adadad;
+  font-size: 20px;
+}

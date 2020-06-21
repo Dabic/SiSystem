@@ -1,0 +1,231 @@
+[
+  {
+    "name": "students-composite",
+    "url": "/students-composite",
+    "composite": true,
+    "services": [
+      {
+        "name": "students-grades",
+        "url": "/grades",
+        "composite": false,
+        "services": [],
+        "endpoints": [
+          {
+            "url": "/get-all-grades",
+            "method": "POST",
+            "roles": [
+              {
+                "id": 1,
+                "name": "ADMINISTRATOR"
+              },
+              {
+                "id": 2,
+                "name": "STUDENT"
+              }
+            ],
+            "metaSchemes": [
+              {
+                "type": "request",
+                "metaSchemeAttributes": [
+                  {
+                    "attributeKey": "username",
+                    "attributeValue": "string",
+                    "mandatory": true,
+                    "transmission": "path"
+                  }
+                ]
+              },
+              {
+                "type": "response",
+                "metaSchemeAttributes": [
+                  {
+                    "attributeKey": "student",
+                    "attributeValue": "Student",
+                    "mandatory": false,
+                    "transmission": "body"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "students-computer",
+        "url": "/computer",
+        "composite": false,
+        "services": [],
+        "endpoints": [
+          {
+            "url": "/sum-grades",
+            "method": "POST",
+            "aggregateFunction": {
+              "id": 1
+            },
+            "roles": [
+              {
+                "id": 1,
+                "name": "ADMINISTRATOR"
+              },
+              {
+                "id": 2,
+                "name": "STUDENT"
+              }
+            ],
+            "metaSchemes": [
+              {
+                "type": "request",
+                "metaSchemeAttributes": [
+                  {
+                    "attributeKey": "username",
+                    "attributeValue": "string",
+                    "mandatory": true,
+                    "transmission": "path"
+                  }
+                ]
+              },
+              {
+                "type": "response",
+                "metaSchemeAttributes": [
+                  {
+                    "attributeKey": "student",
+                    "attributeValue": "Student",
+                    "mandatory": false,
+                    "transmission": "body"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "/avg-grades",
+            "method": "POST",
+            "aggregateFunction": {
+              "id": 2
+            },
+            "roles": [
+              {
+                "id": 1,
+                "name": "ADMINISTRATOR"
+              },
+              {
+                "id": 2,
+                "name": "STUDENT"
+              }
+            ],
+            "metaSchemes": [
+              {
+                "type": "request",
+                "metaSchemeAttributes": [
+                  {
+                    "attributeKey": "username",
+                    "attributeValue": "string",
+                    "mandatory": true,
+                    "transmission": "path"
+                  }
+                ]
+              },
+              {
+                "type": "response",
+                "metaSchemeAttributes": [
+                  {
+                    "attributeKey": "student",
+                    "attributeValue": "Student",
+                    "mandatory": false,
+                    "transmission": "body"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "students-sender",
+        "url": "/sender",
+        "composite": false,
+        "services": [],
+        "endpoints": [
+          {
+            "url": "/send-to-students",
+            "method": "POST",
+            "roles": [
+              {
+                "id": 1,
+                "name": "ADMINISTRATOR"
+              },
+              {
+                "id": 2,
+                "name": "STUDENT"
+              }
+            ],
+            "metaSchemes": [
+              {
+                "type": "request",
+                "metaSchemeAttributes": [
+                  {
+                    "attributeKey": "username",
+                    "attributeValue": "string",
+                    "mandatory": true,
+                    "transmission": "path"
+                  }
+                ]
+              },
+              {
+                "type": "response",
+                "metaSchemeAttributes": [
+                  {
+                    "attributeKey": "student",
+                    "attributeValue": "Student",
+                    "mandatory": false,
+                    "transmission": "body"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "endpoints": [
+      {
+        "url": "/",
+        "method": "GET",
+        "roles": [
+          {
+            "id": 1,
+            "name": "ADMINISTRATOR"
+          },
+          {
+            "id": 2,
+            "name": "STUDENT"
+          }
+        ],
+        "metaSchemes": [
+          {
+            "type": "request",
+            "metaSchemeAttributes": [
+              {
+                "attributeKey": "username",
+                "attributeValue": "string",
+                "mandatory": true,
+                "transmission": "path"
+              }
+            ]
+          },
+          {
+            "type": "response",
+            "metaSchemeAttributes": [
+              {
+                "attributeKey": "student",
+                "attributeValue": "Student",
+                "mandatory": false,
+                "transmission": "body"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

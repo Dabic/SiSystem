@@ -1,0 +1,10 @@
+<div class="container">
+    <table>
+        <tr class="heading">
+            <td *ngFor="let h of heading">{{h}}</td>
+        </tr>
+        <tr class="row" *ngFor="let row of data">
+            <td *ngFor="let col of row">{{col}}</td>
+        </tr>
+    </table>
+</div>

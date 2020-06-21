@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="attributeDetails" appTree>
+    <div class="collapsedIcon">
+      <fa-icon class="caret" [icon]="caretRight"></fa-icon>
+    </div>
+    <div class="notCollapsedIcon">
+      <fa-icon class="caret" [icon]="caretDown"></fa-icon>
+    </div>
+    <img width="30px" height="30px" src="../../../../assets/attribute.png" alt="database"/>
+    <span class="attribute-name">{{attributeName}}</span>
+  </div>
+  <div class="fieldList">
+    <ng-content></ng-content>
+  </div>
+</div>

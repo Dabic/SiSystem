@@ -1,0 +1,23 @@
+.container {
+    height: 100%;
+    box-sizing: border-box;
+}
+.table-part {
+    box-sizing: border-box;
+    height: calc(50% - 5px);
+    width: 100%;
+    border: 1px solid #adadad;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 4px #898989;
+    margin-bottom: 10px;
+}
+.compare-part {
+    box-sizing: border-box;
+    height: calc(50% - 5px);
+    width: 100%;
+    border: 1px solid #adadad;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 4px #898989;
+}

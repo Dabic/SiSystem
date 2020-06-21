@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="entityDetails" appTree>
+    <div class="collapsedIcon">
+      <fa-icon class="caret" [icon]="caretRight"></fa-icon>
+    </div>
+    <div class="notCollapsedIcon">
+      <fa-icon class="caret" [icon]="caretDown"></fa-icon>
+    </div>
+    <img width="30px" height="30px" src="../../../../assets/entity.png" alt="database"/>
+    <span class="entity-name">{{entityName}}</span>
+  </div>
+  <div class="attributeList">
+    <ng-content>
+
+    </ng-content>
+  </div>
+</div>

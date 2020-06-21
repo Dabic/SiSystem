@@ -1,0 +1,16 @@
+<div
+        *ngIf="controlType === 'main' && entityTabsService.selectedMainEntity ||
+        controlType === 'relations' && entityTabsService.relationEntities.length > 0" class="container">
+    <div (click)="controlFunction('create')" class="control">
+        CREATE
+    </div>
+    <div (click)="controlFunction('read')" class="control">
+        READ
+    </div>
+    <div (click)="controlFunction('update')" class="control">
+        UPDATE
+    </div>
+    <div (click)="controlFunction('delete')" class="control">
+        DELETE
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="choose-pattern">
+        <mat-form-field>
+            <mat-label>Select a report pattern</mat-label>
+            <mat-select disableRipple>
+                <mat-option (click)="generateReportService.setCurrentPrintState(1)" value="1">Passed exams pattern</mat-option>
+                <mat-option (click)="generateReportService.setCurrentPrintState(2)" value="2">Competences pattern</mat-option>
+                <mat-option (click)="generateReportService.setCurrentPrintState(3)" value="3">Obligations pattern</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+</div>

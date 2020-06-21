@@ -1,0 +1,14 @@
+<div
+  (click)="onItemClicked()"
+  [ngStyle]="{borderColor: element.marked === false ? '#d1d1d1' : '#2895c7'}"
+  class="container">
+  <div class="image-container">
+    <img [src]="element.imagePath" alt="role"/>
+  </div>
+  <div class="role-container">
+    <div class="role-name">
+      <p [innerHTML]="element.roleName"></p>
+    </div>
+  </div>
+  <app-account-type-item-mark *ngIf="element.marked"></app-account-type-item-mark>
+</div>

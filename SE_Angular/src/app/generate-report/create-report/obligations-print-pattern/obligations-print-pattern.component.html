@@ -1,0 +1,64 @@
+<div *ngIf="state === 3" class="container">
+    <div class="fields-container">
+        <div class="fields-text">
+            Only check fields that you want to print
+        </div>
+        <div class="fields">
+            <mat-checkbox (click)="generateReportService.addRemoveField('studentName')">Student name</mat-checkbox>
+            <mat-checkbox (click)="generateReportService.addRemoveField('studentLastName')">Student last name</mat-checkbox>
+            <mat-checkbox (click)="generateReportService.addRemoveField('employeeName')">Professor name</mat-checkbox>
+            <mat-checkbox (click)="generateReportService.addRemoveField('employeeLastName')">Professor last name</mat-checkbox>
+            <mat-checkbox (click)="generateReportService.addRemoveField('courseName')">Course name</mat-checkbox>
+            <mat-checkbox (click)="generateReportService.addRemoveField('takenDate')">Obligation taken date</mat-checkbox>
+            <mat-checkbox (click)="generateReportService.addRemoveField('type')">Obligation type</mat-checkbox>
+        </div>
+    </div>
+    <div class="criteria-container">
+        <div class="fields-text">
+            Criteria can be applied on only one field
+        </div>
+        <div class="criteria">
+            <div class="choose-pattern-field">
+                <mat-form-field>
+                    <mat-label>Select a field</mat-label>
+                    <mat-select disableRipple>
+                        <mat-option (click)="generateReportService.changeRangeField('\'studentName\'')" value="studentName">Student name</mat-option>
+                        <mat-option (click)="generateReportService.changeRangeField('\'studentName\'')" value="studentLastName">Student last name</mat-option>
+                        <mat-option (click)="generateReportService.changeRangeField('\'employeeName\'')" value="employeeName">Professor name</mat-option>
+                        <mat-option (click)="generateReportService.changeRangeField('\'employeeLastName\'')" value="employeeLastName">Professor last name</mat-option>
+                        <mat-option (click)="generateReportService.changeRangeField('\'courseName\'')" value="courseName">Course name</mat-option>
+                        <mat-option (click)="generateReportService.changeRangeField('\'takenDate\'')" value="takenDate">Obligation taken date</mat-option>
+                        <mat-option (click)="generateReportService.changeRangeField('\'type\'')" value="type">Obligation type</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="choose-pattern-criteria">
+            <mat-form-field>
+                <mat-label>Select a criteria</mat-label>
+                <mat-select disableRipple>
+                    <mat-option (click)="generateReportService.changeRangeCriteria('sw')" value="startsWith">Starts with</mat-option>
+                    <mat-option (click)="generateReportService.changeRangeCriteria('ew')" value="endsWith">Ends with</mat-option>
+                    <mat-option (click)="generateReportService.changeRangeCriteria('cs')" value="contains">Contains</mat-option>
+                    <mat-option (click)="generateReportService.changeRangeCriteria('gt')" value="greaterThan">Greater than</mat-option>
+                    <mat-option (click)="generateReportService.changeRangeCriteria('lt')" value="lessThan">Less than</mat-option>
+                    <mat-option (click)="generateReportService.changeRangeCriteria('eq')" value="equals">Equals</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <div class="choose-pattern-input">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Enter criteria value</mat-label>
+                    <input (input)="generateReportService.changeRangeValue($event)" matInput placeholder="Ex. 1, Sof...">
+                </mat-form-field>
+            </div>
+        </div>
+    </div>
+    <div class="button">
+        <app-button
+                (click)="generateReportService.onGenerate()"
+                buttonName="Confirm"
+                buttonText="Confirm"
+                buttonType="button">
+        </app-button>
+    </div>
+</div>

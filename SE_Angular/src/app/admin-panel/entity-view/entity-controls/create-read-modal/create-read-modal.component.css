@@ -1,0 +1,25 @@
+.container.closed {
+    display: none;
+}
+.container.opened {
+    display: block;
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+.form::ng-deep .container input{
+    width: 400px;
+}
+.form::ng-deep .button {
+    padding: 10px;
+    margin: 8px;
+}

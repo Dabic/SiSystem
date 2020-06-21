@@ -1,0 +1,37 @@
+<div *ngIf="formGroup !== undefined" [ngClass]="entityTableService.formOpened ? 'opened' : 'closed'" class="container">
+    <app-modal>
+        <div class="content">
+            <div class="label">
+                {{action}} {{action === 'Create' ? 'new' : ''}} row for {{entity.name}}
+            </div>
+            <form class="form" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+                <app-sexy-input
+                        *ngFor="let control of template"
+                        [type]="control.type"
+                        [showLabel]="true"
+                        [inputName]="control.name"
+                        [placeholder]="control.label"
+                        [parentForm]="formGroup"
+                        errorMsg="This field is required!">
+                </app-sexy-input>
+                <div class="buttons">
+                    <app-button
+                            (click)="closeModal()"
+                            [disabled]="!formGroup.valid"
+                            buttonName="Confirm"
+                            buttonText="Confirm"
+                            buttonType="submit">
+                    </app-button>
+                    <app-button
+                            (click)="closeModal()"
+                            [danger]="true"
+                            buttonName="Cancel"
+                            buttonText="Cancel"
+                            buttonType="button">
+                    </app-button>
+                </div>
+            </form>
+        </div>
+
+    </app-modal>
+</div>

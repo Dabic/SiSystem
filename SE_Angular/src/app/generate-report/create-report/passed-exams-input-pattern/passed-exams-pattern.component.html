@@ -1,0 +1,11 @@
+<div class="form">
+    <div class="form-desc">
+        <div class="desc-text">
+            All students that passed the exam for <(subject)>
+        </div>
+        <mat-form-field class="example-full-width">
+            <mat-label>Enter subject name</mat-label>
+            <input (input)="generateReportService.changeEquality($event)" matInput placeholder="Ex. Software engineering">
+        </mat-form-field>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #cfd0d1;
+    background-color: #cfd0d1;
+    position: sticky;
+    z-index: 10;
+    top: 0;
+}
+.control {
+    padding: 5px;
+    font-weight: bold;
+    color: #20577A;
+}
+.control:hover {
+    color: #6dadff;
+    cursor: pointer;
+}

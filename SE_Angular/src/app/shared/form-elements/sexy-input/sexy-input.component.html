@@ -1,0 +1,28 @@
+<div [formGroup]="parentForm" class="container" #container>
+  <fa-icon *ngIf="imageClass !== undefined" class="sexy-icon" [icon]=imageClass></fa-icon>
+  <label *ngIf="showLabel;else other">
+    {{placeholder}}
+    <input
+      [formControlName]="inputName"
+      appSexyInput
+      class="sexy-input"
+      [type]="type"
+      [placeholder]="placeholder"
+      [name]="inputName"
+    />
+  </label>
+  <ng-template #other>
+    <input
+            [formControlName]="inputName"
+            appSexyInput
+            class="sexy-input"
+            [type]="type"
+            [placeholder]="placeholder"
+            [name]="inputName"
+    />
+  </ng-template>
+</div>
+<span
+  class="error-msg"
+  *ngIf="errorMsg != null && !parentForm.get(inputName).valid && parentForm.get(inputName).touched">{{errorMsg}}
+</span>

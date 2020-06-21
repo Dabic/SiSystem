@@ -1,0 +1,21 @@
+<div class="container">
+    <mat-tab-group (selectedIndexChange)="tabSelected($event)" [selectedIndex]="entityTabsService.mainEntities.indexOf(entityTabsService.selectedMainEntity)" *ngIf="tabsType === 'main'">
+        <mat-tab *ngFor="let entity of entityTabsService.mainEntities" [label]="entity.name">
+            <app-entity-table
+                [tableType]="'main'"
+                [entityDesc]="entityTabsService.mainEntityData[0]"
+                [entityData]="entityTabsService.mainEntityData">
+            </app-entity-table>
+        </mat-tab>
+    </mat-tab-group>
+
+    <mat-tab-group (selectedIndexChange)="tabSelected($event)" [selectedIndex]="entityTabsService.relationEntities.indexOf(entityTabsService.selectedRelationEntity)" *ngIf="tabsType === 'relations'">
+        <mat-tab *ngFor="let entity of entityTabsService.relationEntities" [label]="entity.name">
+            <app-entity-table
+                    [tableType]="'relations'"
+                    [entityDesc]="entityTabsService.relationEntityData[0]"
+                    [entityData]="entityTabsService.relationEntityData">
+            </app-entity-table>
+        </mat-tab>
+    </mat-tab-group>
+</div>

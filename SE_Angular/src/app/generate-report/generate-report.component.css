@@ -1,0 +1,74 @@
+.container {
+    height: 100vh;
+    width: 100vw;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.content {
+    box-sizing: border-box;
+    border: 1px solid #adadad;
+    box-shadow: 0 0 5px #898989;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background-color: #eeeff0;
+    display: flex;
+}
+.create-and-print-report {
+    width: 500px;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.choose-pattern {
+    border: 1px solid #adadad;
+    border-radius: 10px;
+    background-color: white;
+    height: 100px;
+    box-shadow: 0 0 4px #898989;
+}
+.pattern-input {
+    border: 1px solid #adadad;
+    border-radius: 10px;
+    background-color: white;
+    height: 150px;
+    margin-top: 10px;
+    box-shadow: 0 0 4px #898989;
+}
+.pattern-print {
+    border: 1px solid #adadad;
+    border-radius: 10px;
+    background-color: white;
+    height: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 4px #898989;
+}
+.view-report {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    margin-left: 10px;
+    display: flex;
+}
+.report-table {
+    width: 60%;
+}
+.report-graphs {
+    box-sizing: border-box;
+    height: 100%;
+    width: 40%;
+    margin-left: 10px;
+}
+.report-graphs div {
+    box-sizing: border-box;
+    border: 1px solid #adadad;
+    border-radius: 10px;
+    background-color: white;
+    margin-bottom: 10px;
+    width: 100%;
+    height: calc(33.33% - 7px);
+    box-shadow: 0 0 4px #898989;
+}

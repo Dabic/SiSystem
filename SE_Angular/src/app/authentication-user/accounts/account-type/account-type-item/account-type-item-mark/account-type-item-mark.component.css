@@ -1,0 +1,21 @@
+.container {
+  background-color: #2895c7;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 155px;
+  left: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.container fa-icon {
+  color: white;
+}
+
+fa-icon {
+  margin-top: 1px;
+}

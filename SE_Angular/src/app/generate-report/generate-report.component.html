@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="content">
+        <div class="create-and-print-report">
+            <div class="choose-pattern">
+                <app-create-report></app-create-report>
+            </div>
+            <div class="pattern-input">
+                <app-passed-exams-pattern></app-passed-exams-pattern>
+            </div>
+            <div class="pattern-print">
+                <app-passed-exams-print-pattern [state]="generateReportService.currentPrintState"></app-passed-exams-print-pattern>
+                <app-competences-print-pattern [state]="generateReportService.currentPrintState"></app-competences-print-pattern>
+                <app-obligations-print-pattern [state]="generateReportService.currentPrintState"></app-obligations-print-pattern>
+            </div>
+        </div>
+        <div class="view-report">
+            <div class="report-table">
+                <app-full-report-table *ngIf="generateReportService.currentPrintState != 2;else part"></app-full-report-table>
+            </div>
+            <ng-template #part>
+                <app-part-report-table></app-part-report-table>
+            </ng-template>
+            <div class="report-graphs">
+                <div>
+                    <app-passed-exams-bar-chart></app-passed-exams-bar-chart>
+                </div>
+                <div>
+                    <app-passed-exams-radar-chart></app-passed-exams-radar-chart>
+                </div>
+                <div>
+                    <app-passed-exams-pie-chart></app-passed-exams-pie-chart>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

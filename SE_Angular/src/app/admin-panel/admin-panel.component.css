@@ -1,0 +1,18 @@
+.hierarchy {
+  border: 1px solid black;
+  width: fit-content;
+  min-width: 20vw;
+  height: 99.5vh;
+  overflow-y: scroll;
+}
+
+.database {
+  padding: 5px;
+  width: 100%;
+  max-width: 79vw;
+  height: 99.5vh;
+}
+
+.container {
+  display: flex;
+}

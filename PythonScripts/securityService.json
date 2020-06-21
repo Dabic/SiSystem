@@ -1,0 +1,124 @@
+[
+  {
+    "name": "security-service-save",
+    "url": "/save",
+    "composite": false,
+    "services": [],
+    "endpoints": [
+      {
+        "url": "/",
+        "method": "POST",
+        "roles": [
+          {
+            "id": 1,
+            "name": "ADMINISTRATOR"
+          },
+          {
+            "id": 2,
+            "name": "STUDENT"
+          },
+          {
+            "id": 3,
+            "name": "PROVIDER"
+          },
+          {
+            "id": 4,
+            "name": "SUPERUSER"
+          }
+        ],
+        "metaSchemes": [
+          {
+            "type": "request",
+            "metaSchemeAttributes": [
+              {
+                "attributeKey": "name",
+                "attributeValue": "string",
+                "mandatory": true,
+                "transmission": "body"
+              }
+            ]
+          },
+          {
+            "type": "response",
+            "metaSchemeAttributes": [
+              {
+                "attributeKey": "name",
+                "attributeValue": "string",
+                "mandatory": false,
+                "transmission": "body"
+              },
+              {
+                "attributeKey": "rows",
+                "attributeValue": "jsonarray",
+                "mandatory": false,
+                "transmission": "body"
+              }
+            ]
+          }
+        ],
+        "policies": []
+      }
+    ]
+  },
+  {
+    "name": "security-service-filter",
+    "url": "/filter",
+    "composite": false,
+    "services": [],
+    "endpoints": [
+      {
+        "url": "/",
+        "method": "POST",
+        "roles": [
+          {
+            "id": 1,
+            "name": "ADMINISTRATOR"
+          },
+          {
+            "id": 2,
+            "name": "STUDENT"
+          },
+          {
+            "id": 3,
+            "name": "PROVIDER"
+          },
+          {
+            "id": 4,
+            "name": "SUPERUSER"
+          }
+        ],
+        "metaSchemes": [
+          {
+            "type": "request",
+            "metaSchemeAttributes": [
+              {
+                "attributeKey": "name",
+                "attributeValue": "string",
+                "mandatory": true,
+                "transmission": "body"
+              }
+            ]
+          },
+          {
+            "type": "response",
+            "metaSchemeAttributes": [
+              {
+                "attributeKey": "name",
+                "attributeValue": "string",
+                "mandatory": false,
+                "transmission": "body"
+              },
+              {
+                "attributeKey": "rows",
+                "attributeValue": "jsonarray",
+                "mandatory": false,
+                "transmission": "body"
+              }
+            ]
+          }
+        ],
+        "policies": []
+      }
+    ]
+  }
+]

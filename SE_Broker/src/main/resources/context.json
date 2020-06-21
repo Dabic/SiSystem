@@ -1,0 +1,11 @@
+{
+  "provider": "studenti.com",
+  "services": [
+    {
+      "name": "service1",
+      "composite": "false",
+      "services": [],
+      "status": "running"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding-right: 5px;
+}
+
+.collapsed .fieldList {
+  display: none;
+}
+
+.notCollapsedIcon {
+  display: block;
+}
+
+.collapsedIcon {
+  display: none;
+}
+
+.collapsed .collapsedIcon {
+  display: block;
+}
+
+.collapsed .notCollapsedIcon {
+  display: none;
+}
+
+.highlight {
+  animation: light 500ms ease-out;
+}
+
+@keyframes light {
+  from {
+    background-color: #cfd0d1;
+  }
+}
+
+.attributeDetails {
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+}
+
+.caret {
+  font-size: 25px;
+  color: #edb627;
+  margin-right: 4px;
+}
+
+.attribute-name {
+  font-size: 20px;
+  color: #2895c7;
+  font-weight: bolder;
+  margin-left: 4px;
+}
+
+.attributeDetails:hover {
+  cursor: pointer;
+}
+
+.attributeDetails:hover .attribute-name {
+  color: #5eccff;
+}

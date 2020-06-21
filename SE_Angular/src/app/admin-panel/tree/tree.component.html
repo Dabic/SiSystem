@@ -1,0 +1,30 @@
+<div class="container">
+    <div
+            *ngIf="isLoading">
+        <app-modal>
+            <app-loading-spinner></app-loading-spinner>
+            <p>Loading...</p>
+        </app-modal>
+    </div>
+    <app-database
+            *ngIf="!isLoading"
+            [databaseName]="tree.name">
+        <app-entity
+                *ngFor="let entity of tree.entities"
+                [entityName]="entity.name">
+
+            <app-attribute
+                    *ngFor="let attribute of entity.attributes"
+                    [attributeName]="attribute.name">
+
+                <app-attribute-fields
+                        *ngFor="let attributeField of attribute.attributeFields"
+                        [fieldName]="attributeField.name"
+                        [filedValue]="attributeField.value">
+
+                </app-attribute-fields>
+            </app-attribute>
+        </app-entity>
+    </app-database>
+</div>
+

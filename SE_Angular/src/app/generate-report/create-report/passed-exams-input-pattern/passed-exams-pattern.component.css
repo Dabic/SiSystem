@@ -1,0 +1,20 @@
+.form {
+    width: 100%;
+}
+.form-desc {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.desc-text {
+    color: #2879aa;
+    font-weight: bold;
+    font-size: 17px;
+}
+.example-full-width, .mat-form-field-wrapper {
+    width: 100%;
+}

@@ -1,0 +1,10 @@
+<div class="table-container">
+    <table *ngIf="entityData.length > 0">
+        <tr class="heading">
+            <td *ngFor="let column of entityDesc.attributes"> {{column.name}}</td>
+        </tr>
+        <tr (click)="setActive(entityData.indexOf(row), row)" [ngClass]="activeIndex === entityData.indexOf(row) ? 'active' : ''" class="row" *ngFor="let row of entityData">
+            <td *ngFor="let column of row.attributes">{{column.value}}</td>
+        </tr>
+    </table>
+</div>

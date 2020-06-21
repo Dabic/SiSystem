@@ -1,0 +1,12 @@
+.container {
+    height: 100%;
+}
+.main-entities {
+    height: 50%;
+    overflow-y: auto;
+}
+.relation-entities {
+    height: 50%;
+    overflow-y: auto;
+}
+

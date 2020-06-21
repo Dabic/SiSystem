@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.filedDetails {
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+}
+
+.caret {
+  font-size: 25px;
+  color: #edb627;
+  margin-right: 4px;
+}
+
+.field-name {
+  font-size: 20px;
+  color: #2895c7;
+  font-weight: bolder;
+  margin-left: 4px;
+}
+
+.filedDetails:hover {
+  cursor: pointer;
+}
+
+.filedDetails:hover .field-name {
+  color: #5eccff;
+}

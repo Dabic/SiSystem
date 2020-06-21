@@ -1,0 +1,34 @@
+<form class="container" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <div *ngIf="showError" class="login-error-container">
+    <span class="login-error-text">{{currentMessage}}</span>
+  </div>
+  <app-sexy-input
+    type="text"
+    inputName="email"
+    placeholder="Email/Username"
+    [parentForm]="loginForm"
+    errorMsg="This field is required!"
+    imageClassName="mail">
+  </app-sexy-input>
+
+  <app-sexy-input
+    type="password"
+    inputName="password"
+    placeholder="Password"
+    [parentForm]="loginForm"
+    errorMsg="This field is required!"
+    imageClassName="password">
+  </app-sexy-input>
+
+  <div class="button-container">
+    <div>
+      <span class="firstSpan">No account? </span><a href="#" class="secondSpan">Sign up</a>
+    </div>
+    <app-button
+      [disabled]="!loginForm.valid || !buttonEnabled"
+      buttonName="login"
+      buttonText="Login"
+      buttonType="submit">
+    </app-button>
+  </div>
+</form>

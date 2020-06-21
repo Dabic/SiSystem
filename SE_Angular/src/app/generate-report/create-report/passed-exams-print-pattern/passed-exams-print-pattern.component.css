@@ -1,0 +1,43 @@
+.container {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.fields-container {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #adadad;
+    padding-bottom: 10px;
+}
+.fields-text {
+    color: #2879aa;
+    font-weight: bold;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.fields {
+    display: flex;
+    flex-direction: column;
+}
+.criteria-container {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.mat-form-field {
+    width: 100%;
+}
+.choose-pattern-criteria {
+    border-bottom: 1px solid #adadad;
+
+}
+.button {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

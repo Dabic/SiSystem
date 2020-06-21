@@ -1,0 +1,84 @@
+<div class="container">
+    <div class="subjects">
+        <div class="heading">
+            Compare subjects
+        </div>
+        <mat-form-field>
+            <mat-label>Select a subject</mat-label>
+            <mat-select disableRipple>
+                <mat-option (click)="generateReportService.selectSubject('Software engineering', 0)" value="se">Software engineering</mat-option>
+                <mat-option (click)="generateReportService.selectSubject('Script languages', 0)" value="sl">Script languages</mat-option>
+                <mat-option (click)="generateReportService.selectSubject('Artificial intelligence', 0)" value="ai">Artificial intelligence</mat-option>
+                <mat-option (click)="generateReportService.selectSubject('Web design', 0)" value="wd">Web design</mat-option>
+                <mat-option (click)="generateReportService.selectSubject('Software design', 0)" value="sd">Software design</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Select a subject</mat-label>
+            <mat-select disableRipple>
+                <mat-option (click)="generateReportService.selectSubject('Software engineering', 1)" value="se">Software engineering</mat-option>
+                <mat-option (click)="generateReportService.selectSubject('Script languages', 1)" value="sl">Script languages</mat-option>
+                <mat-option (click)="generateReportService.selectSubject('Artificial intelligence', 1)" value="ai">Artificial intelligence</mat-option>
+                <mat-option (click)="generateReportService.selectSubject('Web design', 1)" value="wd">Web design</mat-option>
+                <mat-option (click)="generateReportService.selectSubject('Software design', 1)" value="sd">Software design</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Select a subject</mat-label>
+            <mat-select disableRipple>
+                <mat-option (click)="generateReportService.selectSubject('Software engineering', 2)" value="se">Software engineering</mat-option>
+                <mat-option (click)="generateReportService.selectSubject('Script languages', 2)" value="sl">Script languages</mat-option>
+                <mat-option (click)="generateReportService.selectSubject('Artificial intelligence', 2)" value="ai">Artificial intelligence</mat-option>
+                <mat-option (click)="generateReportService.selectSubject('Web design', 2)" value="wd">Web design</mat-option>
+                <mat-option (click)="generateReportService.selectSubject('Software design', 2)" value="sd">Software design</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Select a subject</mat-label>
+            <mat-select disableRipple>
+                <mat-option (click)="generateReportService.selectSubject('Software engineering', 3)" value="se">Software engineering</mat-option>
+                <mat-option (click)="generateReportService.selectSubject('Script languages', 3)" value="sl">Script languages</mat-option>
+                <mat-option (click)="generateReportService.selectSubject('Artificial intelligence', 3)" value="ai">Artificial intelligence</mat-option>
+                <mat-option (click)="generateReportService.selectSubject('Web design', 3)" value="wd">Web design</mat-option>
+                <mat-option (click)="generateReportService.selectSubject('Software design', 3)" value="sd">Software design</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Select a subject</mat-label>
+            <mat-select disableRipple>
+                <mat-option (click)="generateReportService.selectSubject('Software engineering', 4)" value="se">Software engineering</mat-option>
+                <mat-option (click)="generateReportService.selectSubject('Script languages', 4)" value="sl">Script languages</mat-option>
+                <mat-option (click)="generateReportService.selectSubject('Artificial intelligence', 4)" value="ai">Artificial intelligence</mat-option>
+                <mat-option (click)="generateReportService.selectSubject('Web design', 4)" value="wd">Web design</mat-option>
+                <mat-option (click)="generateReportService.selectSubject('Software design', 4)" value="sd">Software design</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <app-button
+                (click)="generateReportService.onCompare()"
+                buttonName="Compare"
+                buttonText="Compare"
+                buttonType="button">
+        </app-button>
+    </div>
+
+    <div class="graph">
+        <div class="select">
+            <mat-form-field>
+                <mat-label>Select comparing mode</mat-label>
+                <mat-select [(value)]="selected" disableRipple>
+                    <mat-option value="comp">Competences</mat-option>
+                    <mat-option value="gen">General competences</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="graph-content">
+            <app-compare-competences-radar-chart [selected]="selected"></app-compare-competences-radar-chart>
+        </div>
+    </div>
+
+</div>

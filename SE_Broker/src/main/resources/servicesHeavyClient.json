@@ -1,0 +1,250 @@
+[
+  {
+    "name": "heavy-client-read-service",
+    "url": "/read",
+    "composite": false,
+    "services": [],
+    "endpoints": [
+      {
+        "url": "/",
+        "method": "POST",
+        "roles": [
+          {
+            "id": 1,
+            "name": "ADMINISTRATOR"
+          },
+          {
+            "id": 3,
+            "name": "PROVIDER"
+          }
+        ],
+        "metaSchemes": [
+          {
+            "type": "request",
+            "metaSchemeAttributes": [
+              {
+                "attributeKey": "name",
+                "attributeValue": "string",
+                "mandatory": true,
+                "transmission": "body"
+              }
+            ]
+          },
+          {
+            "type": "response",
+            "metaSchemeAttributes": [
+              {
+                "attributeKey": "name",
+                "attributeValue": "string",
+                "mandatory": false,
+                "transmission": "body"
+              },
+              {
+                "attributeKey": "rows",
+                "attributeValue": "jsonarray",
+                "mandatory": false,
+                "transmission": "body"
+              }
+            ]
+          }
+        ],
+        "policies": [
+          {
+            "role": {
+              "id": 3
+            },
+            "type": {
+              "id": 3
+            },
+            "filters": "name"
+          },
+          {
+            "role": {
+              "id": 1
+            },
+            "type": {
+              "id": 1
+            },
+            "filters": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "heavy-client-create-service",
+    "url": "/create",
+    "composite": false,
+    "services": [],
+    "endpoints": [
+      {
+        "url": "/",
+        "method": "POST",
+        "roles": [
+          {
+            "id": 1,
+            "name": "ADMINISTRATOR"
+          }
+        ],
+        "metaSchemes": [
+          {
+            "type": "request",
+            "metaSchemeAttributes": [
+              {
+                "attributeKey": "username",
+                "attributeValue": "string",
+                "mandatory": true,
+                "transmission": "path"
+              }
+            ]
+          },
+          {
+            "type": "response",
+            "metaSchemeAttributes": [
+              {
+                "attributeKey": "student",
+                "attributeValue": "Student",
+                "mandatory": false,
+                "transmission": "body"
+              }
+            ]
+          }
+        ],
+        "policies": [
+        ]
+      }
+    ]
+  },
+  {
+    "name": "heavy-client-remove-service",
+    "url": "/delete",
+    "composite": false,
+    "services": [],
+    "endpoints": [
+      {
+        "url": "/",
+        "method": "POST",
+        "roles": [
+          {
+            "id": 1,
+            "name": "ADMINISTRATOR"
+          }
+        ],
+        "metaSchemes": [
+          {
+            "type": "request",
+            "metaSchemeAttributes": [
+              {
+                "attributeKey": "username",
+                "attributeValue": "string",
+                "mandatory": true,
+                "transmission": "path"
+              }
+            ]
+          },
+          {
+            "type": "response",
+            "metaSchemeAttributes": [
+              {
+                "attributeKey": "student",
+                "attributeValue": "Student",
+                "mandatory": false,
+                "transmission": "body"
+              }
+            ]
+          }
+        ],
+        "policies": [
+        ]
+      }
+    ]
+  },
+  {
+    "name": "heavy-client-update-service",
+    "url": "/update",
+    "composite": false,
+    "services": [],
+    "endpoints": [
+      {
+        "url": "/",
+        "method": "POST",
+        "roles": [
+          {
+            "id": 1,
+            "name": "ADMINISTRATOR"
+          }
+        ],
+        "metaSchemes": [
+          {
+            "type": "request",
+            "metaSchemeAttributes": [
+              {
+                "attributeKey": "username",
+                "attributeValue": "string",
+                "mandatory": true,
+                "transmission": "path"
+              }
+            ]
+          },
+          {
+            "type": "response",
+            "metaSchemeAttributes": [
+              {
+                "attributeKey": "student",
+                "attributeValue": "Student",
+                "mandatory": false,
+                "transmission": "body"
+              }
+            ]
+          }
+        ],
+        "policies": [
+        ]
+      }
+    ]
+  },
+  {
+    "name": "heavy-client-read-meta-data",
+    "url": "/read-meta-data",
+    "composite": false,
+    "services": [],
+    "endpoints": [
+      {
+        "url": "/",
+        "method": "POST",
+        "roles": [
+          {
+            "id": 1,
+            "name": "ADMINISTRATOR"
+          }
+        ],
+        "metaSchemes": [
+          {
+            "type": "request",
+            "metaSchemeAttributes": [
+              {
+                "attributeKey": "username",
+                "attributeValue": "string",
+                "mandatory": true,
+                "transmission": "path"
+              }
+            ]
+          },
+          {
+            "type": "response",
+            "metaSchemeAttributes": [
+              {
+                "attributeKey": "student",
+                "attributeValue": "Student",
+                "mandatory": false,
+                "transmission": "body"
+              }
+            ]
+          }
+        ],
+        "policies": [
+        ]
+      }
+    ]
+  }
+]
